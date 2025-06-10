@@ -8,6 +8,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Vue3", link: "/packages/vue3" },
       { text: "Test", link: "/packages/test" },
+      { text: "Java", link: "/packages/Java" },
     ],
 
     sidebar: {
@@ -19,8 +20,18 @@ export default defineConfig({
       ],
       "/packages/test/": [
         {
-          text: "Vue3 源码",
+          text: "Vue3 源码1",
           items: [{ text: "响应式系统", link: "/reactive" }],
+        },
+      ],
+      "/packages/Java/": [
+        {
+          text: "Java 学习记录",
+          items: [
+            { text: "Java", link: "/packages/Java" },
+            { text: "JavaEE", link: "/packages/Java/JavaEE" },
+            { text: "面向对象", link: "/packages/Java/OOP" },
+          ],
         },
       ],
     },
