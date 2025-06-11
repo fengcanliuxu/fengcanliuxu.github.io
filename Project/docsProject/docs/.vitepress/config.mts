@@ -1,11 +1,15 @@
 import { defineConfig } from "vitepress";
+import { javaSliderRoutes } from "../routes/java";
 
 export default defineConfig({
   title: "WYW 学习笔记",
   description: "学习记录网站",
   themeConfig: {
+    search: {
+      provider: "local",
+    },
     nav: [
-      { text: "Home", link: "/" },
+      { text: "主页", link: "/" },
       { text: "Vue3", link: "/packages/vue3" },
       { text: "Test", link: "/packages/test" },
       { text: "Java", link: "/packages/Java" },
@@ -24,21 +28,20 @@ export default defineConfig({
           items: [{ text: "响应式系统", link: "/reactive" }],
         },
       ],
-      "/packages/Java/": [
-        {
-          text: "Java 学习记录",
-          items: [
-            { text: "Java", link: "/packages/Java" },
-            { text: "JavaEE", link: "/packages/Java/JavaEE" },
-            { text: "面向对象", link: "/packages/Java/OOP" },
-          ],
-        },
-      ],
+      "/packages/Java/": javaSliderRoutes,
     },
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      {
+        icon: "github",
+        link: "https://github.com/fengcanliuxu/fengcanliuxu.github.io",
+      },
     ],
+
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2019-present Evan You",
+    },
   },
   outDir: "../../../docs",
 });
