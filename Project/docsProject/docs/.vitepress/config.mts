@@ -13,6 +13,7 @@ export default defineConfig({
       { text: "Vue3", link: "/packages/vue3" },
       { text: "Test", link: "/packages/test" },
       { text: "Java", link: "/packages/Java" },
+      { text: "租房", link: "/packages/Room" },
     ],
 
     sidebar: {
@@ -29,6 +30,12 @@ export default defineConfig({
         },
       ],
       "/packages/Java/": javaSliderRoutes,
+      "/packages/Room/": [
+        {
+          text: "小区",
+          items: [{ text: "小区", link: "/packages/Room/小区" }],
+        },
+      ],
     },
 
     socialLinks: [
